@@ -39,3 +39,62 @@ The available commands are:
 * `depth increase` - Increase the depth by a specified amount.
 * `depth decrease` - Decrease the depth by a specified amount.
 * `shutdown` - Shuts down the submarine (on surface only).
+
+## Example Run
+
+```
+>> depth increase
+Amount: 20
+Cannot submerge when hatch is open. Depth unchanged.
+>> hatch close
+Hatch closed.
+>> depth increase
+Amount: 20
+Depth increased to 20 metres.
+>> hatch open
+Cannot open hatch when submerged.
+>> battery recharge
+Cannot recharge battery when submerged.
+>> depth increase
+Amount: 130
+Depth increased to 150 metres.
+>> depth decrease
+Amount: 150
+Depth decreased to 0 metres.
+Recharging battery automatically while at surface.
+Recharging...
+Battery recharged.
+>> hatch open
+Hatch opened.
+>> hatch close
+Hatch closed.
+>> depth increase
+Amount: 150
+Depth increased to 150 metres.
+>> depth decrease
+Amount: 149
+Depth decreased to 1 metres.
+>> depth increase
+Amount: 149
+Depth increased to 150 metres.
+>> depth decrease
+Amount: 149
+Depth decreased to 1 metres.
+>> depth increase
+Amount: 149
+Depth increased to 150 metres.
+>> depth decrease
+Amount: 149
+Depth decreased to 1 metres.
+>> depth increase
+Amount: 149
+Insufficient power for descencion and reascension. Depth unchanged.
+>> depth decrease
+Amount: 1
+Depth decreased to 0 metres.
+Recharging battery automatically while at surface.
+Recharging...
+Battery recharged.
+>> shutdown
+Shutting down.
+```
