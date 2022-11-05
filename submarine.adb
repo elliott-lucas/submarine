@@ -46,7 +46,7 @@ package body submarine is
                AS_Put(Integer'Image(currentDepth));
                AS_Put_Line(" metres.");
             else
-               AS_Put_Line("Insufficient power for descension and reascencion. Depth unchanged.");
+               AS_Put_Line("Insufficient power for descension and reascension. Depth unchanged.");
             end if;
          else
             AS_Put_Line("Cannot submerge when hatch is open. Depth unchanged.");
